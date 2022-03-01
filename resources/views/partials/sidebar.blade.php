@@ -31,5 +31,19 @@
                 </div>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseJob" aria-expanded="true" aria-controls="collapseTwo">
+                    <span>{{ __('Job Management') }}</span>
+                </a>
+                <div id="collapseJob" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item {{ request()->is('admin/categories') || request()->is('admin/categories/*') ? 'active' : '' }}" href="{{ route('admin.categories.index') }}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Categories') }}</a>
+                        <a class="collapse-item {{ request()->is('admin/companies') || request()->is('admin/companies/*') ? 'active' : '' }}" href="{{ route('admin.companies.index') }}"><i class="fa fa-briefcase mr-2"></i> {{ __('Companies') }}</a>
+                        <a class="collapse-item {{ request()->is('admin/locations') || request()->is('admin/locations/*') ? 'active' : '' }}" href="{{ route('admin.locations.index') }}"> <i class="fa fa-user mr-2"></i> {{ __('Locations') }}</a>
+                        <a class="collapse-item {{ request()->is('admin/jobs') || request()->is('admin/jobs/*') ? 'active' : '' }}" href="{{ route('admin.jobs.index') }}"> <i class="fa fa-user mr-2"></i> {{ __('Jobs') }}</a>
+                    </div>
+                </div>
+            </li>
+
 
         </ul>

@@ -24,6 +24,11 @@ Route::group(['middleware' => 'isAdmin','prefix' => 'admin', 'as' => 'admin.'], 
     Route::resource('permissions', \App\Http\Controllers\Admin\PermissionController::class);
     Route::resource('roles', \App\Http\Controllers\Admin\RoleController::class);
     Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
+
+    Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class);
+    Route::resource('locations', \App\Http\Controllers\Admin\LocationController::class);
+    Route::resource('companies', \App\Http\Controllers\Admin\CompanyController::class);
+    Route::resource('jobs', \App\Http\Controllers\Admin\JobController::class);
 });
 
 Auth::routes();
