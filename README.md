@@ -29,7 +29,7 @@ Go to the project directory
 ```
 
 ```bash
-    php artisan db:seed
+    php artisan migrate:fresh db:seed
 ```
 
 #### Login
