@@ -43,7 +43,7 @@ class CompanyController extends Controller
     {
         $image = NULL;
         if ($request->hasFile('logo')) {
-            $image = $this->uploadImage($request->name, $request->logo, 'companies', 268, 268);
+            $image = $this->uploadImage($request->name, $request->logo, 'companies', 197, 183);
         }
 
         Company::create([

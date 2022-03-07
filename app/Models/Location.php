@@ -10,4 +10,8 @@ class Location extends Model
     use HasFactory;
 
     protected $guarded = ['id', 'updated_at', 'created_at'];
+
+    public function jobs(){
+        return $this->hasMany(Job::class);
+    }
 }

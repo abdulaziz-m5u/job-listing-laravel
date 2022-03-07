@@ -15,9 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('', function () {
-    return view('welcome');
-});
+
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
+Route::get('search', [\App\Http\Controllers\HomeController::class, 'search'])->name('search');
+Route::resource('job', \App\Http\Controllers\JobController::class)->only(['index', 'show']);
+Route::get('category/{category}', [\App\Http\Controllers\CategoryController::class, 'show'])->name('category.show');
+Route::get('location/{location}', [\App\Http\Controllers\LocationController::class, 'show'])->name('location.show');
 
 Route::group(['middleware' => 'isAdmin','prefix' => 'admin', 'as' => 'admin.'], function() {
     Route::get('dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard.index');
