@@ -1,4 +1,4 @@
-# Laravel 8 Learning Management System - (LMS)
+# Laravel Job-Listing app
 
 ## Screenshots
 
@@ -29,7 +29,7 @@ Go to the project directory
 ```
 
 ```bash
-    php artisan migrate:fresh db:seed
+    php artisan migrate:fresh --seed
 ```
 
 #### Login
